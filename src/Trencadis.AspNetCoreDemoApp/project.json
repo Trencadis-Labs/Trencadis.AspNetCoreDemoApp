@@ -23,7 +23,8 @@
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
     "Trencadis.AspNetCoreDemoApp.BusinessLogic": "1.0.0-*",
     "Trencadis.AspNetCoreDemoApp.DataAccess": "1.0.0-*",
-    "Trencadis.AspNetCoreDemoApp.Core": "1.0.0-*"
+    "Trencadis.AspNetCoreDemoApp.Core": "1.0.0-*",
+    "Trencadis.AspNetCoreDemoApp.DataAccess.InMemoryObjects": "1.0.0-*"
   },
 
   "tools": {

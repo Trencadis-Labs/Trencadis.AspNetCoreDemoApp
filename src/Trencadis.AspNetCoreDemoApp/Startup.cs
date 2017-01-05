@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-
+using Trencadis.AspNetCoreDemoApp.DataAccess.InMemoryObjects;
+using Trencadis.AspNetCoreDemoApp.DataAccess.InMemoryObjects.Repository;
+using Trencadis.AspNetCoreDemoApp.DataAccess.Repository;
 using Trencadis.AspNetCoreDemoApp.Routes;
 
 namespace Trencadis.AspNetCoreDemoApp
@@ -28,6 +30,10 @@ namespace Trencadis.AspNetCoreDemoApp
     {
       // Add framework services.
       services.AddMvc();
+
+      // register repos
+      services.AddSingleton(new InMemoryDatabaseObject());
+      services.AddScoped<IContactListRepository, ContactListRepository>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
